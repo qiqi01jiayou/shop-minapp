@@ -1,8 +1,8 @@
 import { Http } from "../utils/http";
 
 class Category{
-  static async getHomeLocationC(){
-      return await Http.request({
+  static getHomeLocationC(){
+      return Http.request({
         url:`category`
       })
   }

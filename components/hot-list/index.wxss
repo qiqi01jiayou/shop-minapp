@@ -1,0 +1,40 @@
+@import "../../wxss/miniapp.wxss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40rpx;
+    background-color: #fff;
+}
+
+.title {
+    width: 690rpx;
+    height: 90rpx
+}
+
+.inner-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+
+.left {
+    display: flex;
+    width: 346rpx;
+    height: 522rpx;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-size {
+    width: 400rpx;
+    height: 260rpx;
+    display: flex;
+}

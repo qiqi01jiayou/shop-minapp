@@ -1,0 +1,8 @@
+function mainPrice(price, discountPrice) {
+    return !discountPrice ? price : discountPrice
+}
+
+
+module.exports = {
+    mainPrice: mainPrice
+}

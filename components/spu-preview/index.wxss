@@ -1,0 +1,53 @@
+.container {
+    width: 340rpx;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px 0px rgba(119,163,149,0.2);
+    margin-bottom: 30rpx;
+    background-color: #fff;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    padding: 16rpx 16rpx 22rpx 16rpx;
+}
+
+.img {
+    width: 100%;
+}
+
+.title {
+    margin-top: 6rpx;
+    font-size: 24rpx;
+    color: #333333;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6rpx;
+    flex-wrap: wrap;
+}
+
+.l-tag {
+    background-color: #dcebe6 !important;
+    color: #157658 !important;
+    margin-left: 5rpx !important;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+}
+
+.l-price{
+    margin-right: 10rpx;
+}
+
+.sub-title{
+    margin-top: 6rpx;
+    font-weight: 300;
+    font-size: 28rpx;
+    color: #888;
+}
