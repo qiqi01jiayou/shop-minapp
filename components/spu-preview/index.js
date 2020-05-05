@@ -34,9 +34,7 @@ Component({
      */
     methods: {
         onItemTap(event){
-            console.log(event);
             let pid = event.currentTarget.dataset.pid
-            debugger
             wx.navigateTo({
                 url:`/pages/detail/detail?pid=${pid}`
             })

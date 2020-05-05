@@ -1,2 +1,4 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<s-spec spu="{{spu}}">
+
+
+</s-spec>
