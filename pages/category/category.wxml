@@ -1,0 +1,45 @@
+<view class="container">
+    <!--搜索-->
+    <view class="search-container">
+        <l-button
+                shape="square"
+                width="710"
+                height="60"
+                icon="research"
+                iconColor="#c4c9d2"
+                l-class="search-btn"
+                bind:lintap="onGotoSearch"
+                iconSize="24">
+            搜索商品
+        </l-button>
+    </view>
+    <!--选项卡-->
+    <view class="main">
+        <l-segment
+                height="{{segHeight}}"
+                item-height="70"
+                even="{{false}}"
+                placement="left"
+                width="160"
+                l-active-class="segment-item-active"
+                l-inactive-class="segment-item"
+                l-line-class="l-seg-line"
+                >
+            <l-segment-item key="1" tab="唐门"></l-segment-item>
+            <l-segment-item key="2" tab="长歌"></l-segment-item>
+            <l-segment-item key="3" tab="七秀"></l-segment-item>
+            <l-segment-item key="4" tab="纯阳"></l-segment-item>
+            <l-segment-item key="5" tab="万花"></l-segment-item>
+            <l-segment-item key="6" tab="蓬莱"></l-segment-item>
+            <l-segment-item key="7" tab="凌雪阁"></l-segment-item>
+            <l-segment-item key="8" tab="苍云"></l-segment-item>
+            <l-segment-item key="9" tab="天策"></l-segment-item>
+            <l-segment-item key="10" tab="丐帮"></l-segment-item>
+            <l-segment-item key="11" tab="藏剑"></l-segment-item>
+            <l-segment-item key="12" tab="五毒"></l-segment-item>
+            <l-segment-item key="13" tab="阴阳"></l-segment-item>
+            <l-segment-item key="14" tab="无敌"></l-segment-item>
+        </l-segment>
+        <view></view>
+    </view>
+</view>
