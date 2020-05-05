@@ -3,13 +3,15 @@ import {FenceGroup} from "../models/fence-group";
 import {Judger} from "../models/judger";
 import {Spu} from "../../models/spu";
 import {Cell} from "../models/cell";
+import {Cart} from "../../models/cart";
 
 Component({
     /**
      * 组件的属性列表
      */
     properties: {
-        spu: Object
+        spu: Object,
+        orderWay:String
     },
 
     lifetimes: {
@@ -26,6 +28,7 @@ Component({
                     //    isSkuIntact:true
                 })
                 this.bindSkuData(spu.sku_list[0])
+                this.setStockStatus(spu.sku_list[0].stock, this.data.currentSkuCount)
                 return
             }
             let fenceGroup = new FenceGroup(spu)
@@ -36,11 +39,14 @@ Component({
             let defaultSku = fenceGroup.getDefaultSku();
             if (defaultSku) {
                 this.bindSkuData(defaultSku)
+                this.setStockStatus(defaultSku.stock,this.data.currentSkuCount)
             } else {
                 this.bindSpuData()
             }
             this.bindTipData()
             this.bindInitData(fenceGroup)
+
+            this.triggerSpecEvent()
         }
     },
 
@@ -55,6 +61,7 @@ Component({
         discountPrice: Object,
         stock: Object,
         isSkuIntact: Object,
+        currentSkuCount:Cart.SKU_MIN_COUNT
     },
 
     /**
@@ -106,12 +113,14 @@ Component({
             if (skuIntact) {
                 let currentSku = jud.getDeterminateSku()
                 this.bindSkuData(currentSku)
-                // this.setStockStatus(currentSku.stock,this.data.currentSkuCount)
+                this.setStockStatus(currentSku.stock, this.data.currentSkuCount)
             }
             this.bindTipData()
             this.setData({
                 fences: jud.fenceGroup.fences
             })
+
+            this.triggerSpecEvent()
         },
         setStockStatus(stock, currentCount) {
             this.setData({
@@ -121,5 +130,29 @@ Component({
         isOutOfStock(stock, currentCount) {
             return stock < currentCount
         },
+        onSelectCount(event) {
+            let currentCount = event.detail.count
+            this.data.currentSkuCount = currentCount
+            if (this.data.jud.isSkuIntact()) {
+                let sku = this.data.jud.getDeterminateSku()
+                this.setStockStatus(sku.stock, currentCount)
+            }
+        },
+        //数据传递到页面
+        triggerSpecEvent(){
+            const noSpec = Spu.isNoSpec(this.properties.spu)
+            if(noSpec){
+                this.triggerEvent('specchange',{
+                    noSpec
+                })
+            }else{
+                this.triggerEvent('specchange',{
+                    noSpec:Spu.isNoSpec(this.properties.spu),
+                    isSkuIntact: this.data.jud.isSkuIntact(),
+                    currentValues: this.data.jud.getCurrentValues(),
+                    missingKeys: this.data.jud.getMissingKeys()
+                })
+            }
+        }
     }
 })

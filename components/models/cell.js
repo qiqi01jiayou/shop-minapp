@@ -6,6 +6,7 @@ class Cell {
     value
     status= CellStatus.WAITING
     spec
+    skuImg
 
     constructor(spec) {
         this.value = spec.value

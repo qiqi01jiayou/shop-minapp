@@ -1,7 +1,12 @@
 .container {
     box-sizing: border-box;
-    padding: 30rpx;
     background-color: white;
+    max-height: 1000rpx;
+    min-height: 700rpx;
+    margin-bottom: 100rpx;
+}
+.inner-container{
+    padding: 20rpx 20rpx 0rpx 20rpx;
 }
 
 .sku-preview {
@@ -62,4 +67,37 @@
 
 .sku-pending > text:nth-child(2) {
     color: #666;
+}
+
+.counter-container{
+    margin-top: 34rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 200rpx;
+}
+
+.counter-container text{
+    color: #555;
+    font-size: 24rpx;
+}
+
+.bottom-btn{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+}
+
+.out-stock{
+    background-color: #DCEBE6;
+}
+.bottom-btn text{
+    color: #ffffff;
 }

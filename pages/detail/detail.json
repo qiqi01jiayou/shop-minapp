@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "s-spec": "/components/spec/index"
+    "s-spec": "/components/spec/index",
+    "s-tabbar": "/components/tab-bar/index",
+    "s-spu-des": "/components/spu-des/index",
+    "s-sale-explain": "/components/sale-explain/index"
   }
 }

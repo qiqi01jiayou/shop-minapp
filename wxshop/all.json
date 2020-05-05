@@ -574,6 +574,16 @@
           "id": 165,
           "img": "http://i1.sleeve.7yue.pro/assets/5605cd6c-f869-46db-afe6-755b61a0122a.png",
           "spu_id": 2
+        },
+        {
+          "id": 165,
+          "img": "http://i1.sleeve.7yue.pro/assets/5605cd6c-f869-46db-afe6-755b61a0122a.png",
+          "spu_id": 2
+        },
+        {
+          "id": 165,
+          "img": "http://i1.sleeve.7yue.pro/assets/5605cd6c-f869-46db-afe6-755b61a0122a.png",
+          "spu_id": 2
         }
       ],
       "spu_detail_img_list": [
@@ -586,6 +596,24 @@
       ],
       "sketch_spec_id": 1,
       "default_sku_id": 5
+    }
+  ],
+  "explain": [
+    {
+      "id":1,
+      "fixed":true,
+      "text":"发货地：上海",
+      "spu_id":null,
+      "index":1,
+      "replace_id":null
+    },
+    {
+      "id":2,
+      "fixed":true,
+      "text":"物流：顺丰",
+      "spu_id":null,
+      "index":2,
+      "replace_id":null
     }
   ]
 }
