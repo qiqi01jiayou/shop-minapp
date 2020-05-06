@@ -5,7 +5,8 @@
     "pages/cart/cart",
     "pages/category/category",
     "pages/my/my",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/spu-list/spu-list"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -49,6 +50,7 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "l-grid": "/miniprogram_npm/lin-ui/grid/index",
+    "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
     "l-icon": "/miniprogram_npm/lin-ui/icon/index",
     "l-badge": "/miniprogram_npm/lin-ui/badge/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
